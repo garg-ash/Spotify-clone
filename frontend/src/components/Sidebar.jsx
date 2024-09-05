@@ -1,20 +1,30 @@
 import React from 'react'
+import { assets } from '../assets/assets'
 
 function Sidebar() {
   return (
-    <div className='text-white w-[25%] flex-col gap - 2 p-2 h-full'>
-        <div className='library w-full bg-zinc-800 rounded-xl m-2 p-3 flex justify-between'>
-          <div className='library-image h-10 w-10 bg-zinc-800 rounded-full'>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxXVvFiU5rqXDxkF9qWof-JUxWb6JDK2mKlw&s" className='img-fluid rounded-full cursor-pointer' alt="" />
+    <div className='text-white w-[24%] p-2 bg-zinc-800 rounded-xl my-6 mx-3'>
+        <div className='library w-full p-3 flex justify-between'>
+          <div className='library-image w-7 bg-zinc-800 rounded-full flex justify-start'>
+            <img className='img-fluid rounded-full cursor-pointer' src={assets.stack_icon} alt="" />
+           <p className='text-gray-400 hover:text-white cursor-pointer'>Your Library</p>  
           </div>
-          <div>
-           <h5 className='text-gray-400 hover:text-white cursor-pointer text-left'>Your Library</h5>  
-           </div>
-          <div className='plus' text-white>
-            +
+          
+           
+          <div className='plus h-6 w-6' >
+            <img src={assets.plus_icon} alt="" />
           </div>
         </div>
-        
+        <div className='create_playlist w-full my-2 bg-zinc-900 rounded-xl'>
+          <h6 className='p-3 font-bold'>Create Your First Playlist</h6>
+          <h6 className='px-3'>it's easy, we'll help you</h6>
+          <button className='bg-white text-black py-1 px-4 rounded-xl m-3 transition ease-in-out delay-150 bg-white-500 hover:-translate-y-1 hover:scale-110 hover:bg-white-500 duration-300 ...'>Create Playlist</button>
+        </div>
+        <div className='create_playlist w-full my-2 bg-zinc-900 rounded-xl'>
+          <h6 className='p-3 font-bold'>Let's find some podcasts to follow</h6>
+          <h6 className='px-3'>We will keep you updated on new episodes</h6>
+          <button className='bg-white text-black py-1 px-4 rounded-xl m-3 transition ease-in-out delay-150 bg-white-500 hover:-translate-y-1 hover:scale-110 hover:bg-white-500 duration-300 ...'>Browse Podcasts</button>
+        </div>
     </div>
   )
 }
